@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../../assets/css/style.css"/>
+    <link rel="stylesheet" href="../../assets/css/registerStyle.css"/>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+        (function() {
+            emailjs.init("user_WXJmcieuRmuoN8RKlI6zU");
+        })();
+    </script>
+   <style>
+       .error{
+           display: none;
+           color: red;
+       }  
+   </style>
+   
+ 
+</head>
+<body>
+    <header id="header">
+        <h1>Attendance System For ITI</h1>
+    </header>
+    <section>
+        <section class="content">
+            <div class="register-form">   
+                    <form  id="contact-form">                        
+                        <input type="text" name="fname"   placeholder="first name" required id="fname" autocomplete="none"/><p class="error">FName must not be null and at least contains 6 letters</p>
+                        <input type="text" name="lname"   placeholder="last name"  required id="lname" autocomplete="none"/><p class="error">LName must not be null and at least contains 6 letters</p>
+                        <input type="text" name="address" placeholder="address"    required id="address" autocomplete="none"/><p class="error">Adress must not be null and at least contains 6 letters</p>
+                        <input type="text" name="email"   placeholder="email"      required id="email" autocomplete="none"/><p class="error">Email must be in form of example@gmail.com</p>
+                        <input type="text" name="age"     placeholder="age"        required id="age" autocomplete="none"/><p class="error">Age must be number and greater than or equal 25</p>
+                        <input type="submit" id="register" value="Register"/> 
+                        <p>Already have Account? <a href="../Home.html">Login</a></p>     
+                    </form>                 
+            </div>
+        </section>
+    </section> 
+    <script src="../../assets/js/validation.js"></script>
+    <script src="../../assets/js/register.js"></script>
+</body>
+</html>
